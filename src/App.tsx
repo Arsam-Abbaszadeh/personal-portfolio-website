@@ -98,19 +98,19 @@ function WorkTimeline() {
   return (
     <section id="work" className="pt-20">
       <SectionHeading>Work</SectionHeading>
-      <div className="relative space-y-0 before:absolute before:left-2 before:top-2 before:h-[calc(100%-1rem)] before:w-px before:bg-zinc-900 sm:before:left-[11rem]">
+      <div className="relative space-y-0 before:absolute before:left-2 before:top-2 before:h-[calc(100%-1rem)] before:w-px before:bg-zinc-900 sm:before:left-[8.5rem]">
         {workTimeline.map((item) => (
           <article
             key={`${item.range}-${item.company}`}
-            className="grid gap-4 border-b border-zinc-900 py-7 pl-8 sm:grid-cols-[10rem_1fr] sm:gap-8 sm:pl-0"
+            className="grid gap-4 border-b border-zinc-900 py-7 pl-8 sm:grid-cols-[7.5rem_1fr] sm:gap-8 sm:pl-0"
           >
             <div
-              className={`relative max-w-[9rem] font-mono text-xs leading-5 ${
+              className={`relative font-mono text-xs leading-5 ${
                 item.current ? "text-accent" : "text-zinc-500"
               }`}
             >
               <span
-                className={`absolute -left-[1.94rem] top-1 size-4 rounded-full border ring-4 ring-ink-950 sm:left-[10.53rem] ${
+                className={`absolute -left-[1.94rem] top-1 size-4 rounded-full border ring-4 ring-ink-950 sm:left-[8.03rem] ${
                   item.current
                     ? "border-accent/50 bg-accent shadow-[0_0_0_5px_rgba(74,222,128,0.08)]"
                     : "border-zinc-800 bg-ink-950"
