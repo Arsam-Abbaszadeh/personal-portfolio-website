@@ -31,13 +31,14 @@ export type EducationItem = {
 
 export const profile = {
   name: "Arsam Abbaszadeh",
+  heroName: "Hey, I'm Arsam 👋",
   initials: "A",
   birthdate: "2006-10-24",
   location: "Melbourne, Australia",
-  tagline: "Builder and engineer focused on learning and useful products.",
-  image: "/profile%20image.png",
+  tagline: "Software engineer building useful AI and web products.",
+  image: "/profile-image.png",
   bio:
-    "Hi, I'm Arsam. I'm a software engineer trying to build impactful products. I recently left WiseTech Global, where I worked on logistics software used by companies like DHL and FedEx. Right now, I'm focused on deepening my engineering skills, building products end to end, and looking for my next great opportunity.",
+    "I recently left WiseTech Global, where I worked on logistics software used by companies like DHL and FedEx. Right now, I'm focused on sharpening my engineering skills, building products end to end, and finding my next great opportunity.",
 };
 
 export const links: LinkItem[] = [
@@ -61,15 +62,15 @@ export const links: LinkItem[] = [
 export const workTimeline: TimelineItem[] = [
   {
     range: "May 2026 - Present",
-    role: "Founder",
+    role: "Co-Founder",
     company: "Stealth EdTech Startup",
     current: true,
     description:
-      "Building an early-stage education technology product. Placeholder details for now while the company stays in stealth.",
+      "Building an early-stage education technology product, bringing AI capability safe and tailored for Australian schools",
     bullets: [
-      "Prototyping AI-assisted learning workflows for students and educators.",
-      "Designing the core product experience, onboarding flow, and feedback loops.",
-      "Validating early problem areas through user conversations and small experiments.",
+      "Team secured grant funding to accelerate product development",
+      "Established engineering best practices and architectural standards for the product",
+      "Co-designed core product experience through direct engagement with educators and stakeholders",
     ],
   },
   {

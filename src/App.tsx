@@ -31,19 +31,10 @@ const iconMap: Record<LinkItem["kind"], React.ComponentType<{ size?: number }>> 
     external: ExternalLink,
   };
 
-function SectionHeading({
-  children,
-  count,
-}: {
-  children: string;
-  count?: number;
-}) {
+function SectionHeading({ children }: { children: string }) {
   return (
-    <div className="mb-7 flex items-center gap-3 font-mono text-sm uppercase tracking-[0.16em] text-zinc-300">
+    <div className="mb-8 flex items-center gap-4 font-mono text-base uppercase tracking-[0.14em] text-zinc-200">
       <span>{children}</span>
-      {typeof count === "number" ? (
-        <span className="text-xs tracking-normal text-zinc-600">// {String(count).padStart(2, "0")}</span>
-      ) : null}
       <span className="h-px flex-1 bg-zinc-900" />
     </div>
   );
@@ -63,7 +54,7 @@ function Hero() {
           />
           <div>
             <h1 className="text-4xl font-semibold tracking-[-0.04em] text-zinc-50 sm:text-5xl">
-              {profile.name}
+              {profile.heroName}
             </h1>
             <p className="mt-3 max-w-lg text-balance text-base text-zinc-400">
               {profile.tagline}
@@ -106,20 +97,20 @@ function Hero() {
 function WorkTimeline() {
   return (
     <section id="work" className="pt-20">
-      <SectionHeading count={workTimeline.length}>Work</SectionHeading>
-      <div className="relative space-y-0 before:absolute before:left-2 before:top-2 before:h-[calc(100%-1rem)] before:w-px before:bg-zinc-900 sm:before:left-[8.5rem]">
+      <SectionHeading>Work</SectionHeading>
+      <div className="relative space-y-0 before:absolute before:left-2 before:top-2 before:h-[calc(100%-1rem)] before:w-px before:bg-zinc-900 sm:before:left-[11rem]">
         {workTimeline.map((item) => (
           <article
             key={`${item.range}-${item.company}`}
-            className="grid gap-4 border-b border-zinc-900 py-7 pl-8 sm:grid-cols-[7.5rem_1fr] sm:gap-8 sm:pl-0"
+            className="grid gap-4 border-b border-zinc-900 py-7 pl-8 sm:grid-cols-[10rem_1fr] sm:gap-8 sm:pl-0"
           >
             <div
-              className={`relative font-mono text-xs ${
+              className={`relative max-w-[9rem] font-mono text-xs leading-5 ${
                 item.current ? "text-accent" : "text-zinc-500"
               }`}
             >
               <span
-                className={`absolute -left-[1.94rem] top-1 size-4 rounded-full border ring-4 ring-ink-950 sm:left-[8.03rem] ${
+                className={`absolute -left-[1.94rem] top-1 size-4 rounded-full border ring-4 ring-ink-950 sm:left-[10.53rem] ${
                   item.current
                     ? "border-accent/50 bg-accent shadow-[0_0_0_5px_rgba(74,222,128,0.08)]"
                     : "border-zinc-800 bg-ink-950"
@@ -169,7 +160,7 @@ function WorkTimeline() {
 function Projects() {
   return (
     <section id="projects" className="pt-20">
-      <SectionHeading count={projects.length}>Projects</SectionHeading>
+      <SectionHeading>Projects</SectionHeading>
       <div className="grid gap-4">
         {projects.map((project) => {
           const content = (
@@ -251,7 +242,6 @@ function Contact() {
 
   return (
     <footer id="contact" className="pt-20 pb-10">
-      <SectionHeading>Contact</SectionHeading>
       <div className="rounded-lg border border-zinc-900 bg-white/[0.015] p-6">
         <h2 className="text-2xl font-semibold tracking-[-0.03em] text-zinc-50">
           Wanna talk?
@@ -281,7 +271,7 @@ function Contact() {
 export default function App() {
   return (
     <main className="min-h-screen bg-ink-950 text-zinc-100">
-      <div className="mx-auto w-full max-w-3xl px-6">
+      <div className="mx-auto w-full max-w-4xl px-6">
         <Hero />
         <WorkTimeline />
         <Projects />
