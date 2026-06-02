@@ -68,7 +68,7 @@ export const workTimeline: TimelineItem[] = [
     description:
       "Building an early-stage education technology product, bringing AI capability safe and tailored for Australian schools",
     bullets: [
-      "Team secured grant funding to accelerate product development",
+      "Team secured grant $20K funding to accelerate product development",
       "Established engineering best practices and architectural standards for the product",
       "Co-designed core product experience through direct engagement with educators and stakeholders",
     ],
