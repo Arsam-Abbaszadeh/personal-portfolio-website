@@ -38,7 +38,7 @@ export const profile = {
   tagline: "Software engineer building useful AI and web products.",
   image: "/profile-image.png",
   bio:
-    "I recently left WiseTech Global, where I worked on logistics software used by companies like DHL and FedEx. Right now, I'm focused on sharpening my engineering skills, building products end to end, and finding my next great opportunity.",
+    "I recently left WiseTech Global, where I worked on logistics software used by companies like DHL and FedEx. Right now, I'm focused on sharpening my engineering skills, building products end to end, and working my current opportunities.",
 };
 
 export const links: LinkItem[] = [
@@ -66,11 +66,11 @@ export const workTimeline: TimelineItem[] = [
     company: "Stealth EdTech Startup",
     current: true,
     description:
-      "Building an early-stage education technology product, bringing AI capability safe and tailored for Australian schools",
+      "Building an early-stage education technology product, bringing AI capability secured and tailored for Australian schools",
     bullets: [
       "Team secured grant $20K funding to accelerate product development",
-      "Established engineering best practices and architectural standards for the product",
-      "Co-designed core product experience through direct engagement with educators and stakeholders",
+      "Establishing engineering best practices and architectural standards for the product",
+      "Co-designing core product experience through direct engagement with educators and stakeholders",
     ],
   },
   {
@@ -80,9 +80,9 @@ export const workTimeline: TimelineItem[] = [
     description:
       "Worked for 1 year and 5 months across production software engineering tasks in a large-scale logistics software environment.",
     bullets: [
-      "Diagnosed and remediated a production data-quality incident affecting a major customer, writing the code fix and SQL data-correction query for 10,000+ contaminated rows.",
       "Built and maintained C# / ASP.NET Core scraping services running 30,000+ scrapes and 100,000+ API calls per day.",
       "Designed post-processing pipelines to validate, deduplicate, and transform 1M+ records into structured shipping datasets.",
+      "Diagnosed and remediated a production data-quality incident affecting a major customer, writing the code fix and SQL data-correction query for 10,000+ contaminated rows.",
       "Built an agentic CLI tool for scraper integrations, producing design-ready reports and reducing manual investigation time by 4-6 hours per integration.",
       "Migrated an internal frontend tool from JavaScript to TypeScript, rebuilt Vue components, restyled the UI with SCSS, and improved request performance from 60s to 5s with pagination.",
     ],
@@ -93,7 +93,7 @@ export const projects: ProjectItem[] = [
   {
     name: "Real-Time Messaging Web App",
     description:
-      "Distributed messaging app with an ASP.NET Core backend, Kafka, PostgreSQL, WebSocket communication, JWT auth with refresh-token revocation, and direct-to-S3 media uploads.",
+      "Distributed messaging web app with an ASP.NET Core backend, Kafka, PostgreSQL, WebSocket communication, JWT auth with refresh-token revocation, and direct-to-S3 media uploads.",
     stack: ["ASP.NET Core", "Kafka", "PostgreSQL", "Vue", "TypeScript", "AWS S3"],
     href: "https://github.com/Arsam-Abbaszadeh/real-time-messaging-app",
   },
@@ -115,7 +115,7 @@ export const projects: ProjectItem[] = [
 
 export const education: EducationItem[] = [
   {
-    range: "Expected Oct 2027",
+    range: "Expected Graduation: Oct 2027",
     institution: "Monash University",
     program: "Bachelor of Computer Science Advanced (Honours)",
     note:
