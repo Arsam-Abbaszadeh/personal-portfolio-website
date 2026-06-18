@@ -61,6 +61,14 @@ export const links: LinkItem[] = [
 
 export const workTimeline: TimelineItem[] = [
   {
+    range: "Incoming - June 2026",
+    role: "Jane Street SEE Program",
+    current: true,
+    company: "Jane Street",
+    description:
+      "Selected for Jane Street's SEE program in the software engineering track, spending a month in Hong Kong.",
+  },
+  {
     range: "May 2026 - Present",
     role: "Co-Founder",
     company: "Stealth EdTech Startup",
