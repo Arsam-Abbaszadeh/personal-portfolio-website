@@ -62,7 +62,7 @@ export const links: LinkItem[] = [
 export const workTimeline: TimelineItem[] = [
   {
     range: "Incoming - June 2026",
-    role: "Jane Street SEE Program",
+    role: "SEE Program",
     current: true,
     company: "Jane Street",
     description:
