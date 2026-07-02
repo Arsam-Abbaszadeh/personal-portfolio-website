@@ -40,6 +40,20 @@ function SectionHeading({ children }: { children: string }) {
   );
 }
 
+function RichText({ text }: { text: string }) {
+  return text.split(/(\*\*[^*]+\*\*)/g).map((part, index) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={`${part}-${index}`} className="font-semibold text-zinc-200">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+
+    return part;
+  });
+}
+
 function Hero() {
   const age = calculateAge(profile.birthdate);
 
@@ -124,13 +138,17 @@ function WorkTimeline() {
                 <span className="font-normal text-zinc-500"> at </span>
                 {item.company}
               </h3>
-              <p className="mt-3 leading-7 text-zinc-400">{item.description}</p>
+              <p className="mt-3 leading-7 text-zinc-400">
+                <RichText text={item.description} />
+              </p>
               {item.bullets?.length ? (
                 <ul className="mt-4 space-y-2 text-sm leading-6 text-zinc-400">
                   {item.bullets.map((bullet) => (
                     <li key={bullet} className="flex gap-3">
                       <span className="mt-2 size-1.5 shrink-0 rounded-full bg-zinc-700" />
-                      <span>{bullet}</span>
+                      <span>
+                        <RichText text={bullet} />
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -141,6 +159,8 @@ function WorkTimeline() {
                     <a
                       key={link.label}
                       href={link.href}
+                      target={link.href.startsWith("http") ? "_blank" : undefined}
+                      rel={link.href.startsWith("http") ? "noreferrer" : undefined}
                       className="inline-flex items-center gap-1.5 font-mono text-xs text-accent transition hover:text-accent-soft"
                     >
                       {link.label}

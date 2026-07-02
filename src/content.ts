@@ -71,15 +71,16 @@ export const workTimeline: TimelineItem[] = [
   {
     range: "May 2026 - Present",
     role: "Co-Founder",
-    company: "Stealth EdTech Startup",
+    company: "Classi",
     current: true,
     description:
-      "Building an early-stage education technology product, bringing AI capability secured and tailored for Australian schools",
+      "Co-founded an EdTech product for building subject-specific AI learning apps for classrooms.",
     bullets: [
-      "Team secured grant $20K funding to accelerate product development",
-      "Establishing engineering best practices and architectural standards for the product",
-      "Co-designing core product experience through direct engagement with educators and stakeholders",
+      "Helped secure **$20,000** in team grant funding and built a **working MVP** reviewed by **several teachers**.",
+      "Built the full-stack classroom app with **Next.js, React, Supabase Auth/Postgres, and Tailwind CSS**, including teacher/student roles, classrooms, app publishing, session history, and review workflows.",
+      "Implemented **AI chat app** using **Vertex AI and AWS Bedrock**, alongside an **agentic harness** to answer student problems.",
     ],
+    links: [{ label: "Live Preview", href: "https://tryclassi.com" }],
   },
   {
     range: "Jan 2025 - May 2026",
@@ -88,16 +89,23 @@ export const workTimeline: TimelineItem[] = [
     description:
       "Worked for 1 year and 5 months across production software engineering tasks in a large-scale logistics software environment.",
     bullets: [
-      "Built and maintained C# / ASP.NET Core scraping services running 30,000+ scrapes and 100,000+ API calls per day.",
-      "Designed post-processing pipelines to validate, deduplicate, and transform 1M+ records into structured shipping datasets.",
-      "Diagnosed and remediated a production data-quality incident affecting a major customer, writing the code fix and SQL data-correction query for 10,000+ contaminated rows.",
-      "Built an agentic CLI tool for scraper integrations, producing design-ready reports and reducing manual investigation time by 4-6 hours per integration.",
-      "Migrated an internal frontend tool from JavaScript to TypeScript, rebuilt Vue components, restyled the UI with SCSS, and improved request performance from 60s to 5s with pagination.",
+      "Built and maintained **C# / ASP.NET Core** scraping services running **30,000+ scrapes and 100,000+ API calls per day**.",
+      "Designed post-processing pipelines to **validate, deduplicate, and transform 1M+ records** into structured shipping datasets.",
+      "Diagnosed and remediated a **production data-quality incident** affecting a **major customer**, writing the code fix and **SQL** data-correction query for **10,000+ contaminated rows**.",
+      "Built an **agentic CLI tool** for scraper integrations, **producing design-ready reports and reducing manual investigation time by 4-6 hours** per integration.",
+      "Migrated an internal frontend tool **from JavaScript to TypeScript, rebuilt Vue components**, restyled the UI with SCSS, and **improved request performance from 60s to 5s** with pagination.",
     ],
   },
 ];
 
 export const projects: ProjectItem[] = [
+  {
+    name: "Classi",
+    description:
+      "EdTech product for building subject-specific AI learning apps, with $20,000 in team grant funding, a working MVP reviewed by several teachers, classroom roles, app publishing, session history, review workflows, and AI chat powered by Vertex AI and AWS Bedrock.",
+    stack: ["Next.js", "React", "Supabase", "Tailwind CSS", "Vertex AI", "AWS Bedrock"],
+    href: "https://tryclassi.com",
+  },
   {
     name: "Real-Time Messaging Web App",
     description:
