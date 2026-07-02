@@ -38,7 +38,7 @@ export const profile = {
   tagline: "Software engineer building useful AI and web products.",
   image: "/profile-image.png",
   bio:
-    "I recently left WiseTech Global, where I worked on logistics software used by companies like DHL and FedEx. Right now, I'm focused on sharpening my engineering skills, building products end to end, and working my current opportunities.",
+    "I recently left WiseTech Global, where I worked on logistics software used by companies like DHL and FedEx. Right now, I'm focused on sharpening my engineering skills, building products end to end like [Classi](https://tryclassi.com) (and others), and working my current opportunities.",
 };
 
 export const links: LinkItem[] = [

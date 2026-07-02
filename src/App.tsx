@@ -41,12 +41,28 @@ function SectionHeading({ children }: { children: string }) {
 }
 
 function RichText({ text }: { text: string }) {
-  return text.split(/(\*\*[^*]+\*\*)/g).map((part, index) => {
+  return text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g).map((part, index) => {
     if (part.startsWith("**") && part.endsWith("**")) {
       return (
         <strong key={`${part}-${index}`} className="font-semibold text-zinc-200">
           {part.slice(2, -2)}
         </strong>
+      );
+    }
+
+    const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (linkMatch) {
+      const [, label, href] = linkMatch;
+      return (
+        <a
+          key={`${href}-${index}`}
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+          className="font-semibold text-accent underline decoration-accent/40 underline-offset-4 transition hover:text-accent-soft"
+        >
+          {label}
+        </a>
       );
     }
 
@@ -77,7 +93,9 @@ function Hero() {
         </div>
 
         <div className="mt-8 max-w-2xl space-y-5">
-          <p className="text-lg leading-8 text-zinc-200">{profile.bio}</p>
+          <p className="text-lg leading-8 text-zinc-200">
+            <RichText text={profile.bio} />
+          </p>
           <div className="flex flex-wrap gap-x-5 gap-y-3 font-mono text-sm text-zinc-500">
             <span className="inline-flex items-center gap-2">
               <MapPin size={15} />
