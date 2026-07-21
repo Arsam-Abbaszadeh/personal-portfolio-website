@@ -75,7 +75,7 @@ export const workTimeline: TimelineItem[] = [
     links: [{ label: "Live Preview", href: "https://tryclassi.com" }],
   },
   {
-    range: "Incoming - June 2026",
+    range: "June 2026 - June 2026",
     role: "SEE Program",
     company: "Jane Street",
     description:
