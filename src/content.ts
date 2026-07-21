@@ -61,14 +61,6 @@ export const links: LinkItem[] = [
 
 export const workTimeline: TimelineItem[] = [
   {
-    range: "Incoming - June 2026",
-    role: "SEE Program",
-    current: true,
-    company: "Jane Street",
-    description:
-      "Selected for Jane Street's SEE program in the software engineering track, spending a month in Hong Kong.",
-  },
-  {
     range: "May 2026 - Present",
     role: "Co-Founder",
     company: "Classi",
@@ -81,6 +73,13 @@ export const workTimeline: TimelineItem[] = [
       "Implemented **AI chat app** using **Vertex AI and AWS Bedrock**, alongside an **agentic harness** to answer student problems.",
     ],
     links: [{ label: "Live Preview", href: "https://tryclassi.com" }],
+  },
+  {
+    range: "Incoming - June 2026",
+    role: "SEE Program",
+    company: "Jane Street",
+    description:
+      "Selected for Jane Street's SEE program in the software engineering track, spending a month in Hong Kong.",
   },
   {
     range: "Jan 2025 - May 2026",
